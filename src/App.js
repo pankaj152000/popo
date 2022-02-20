@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import Rose from "./rose.png";
+import Lotus from "./lotus.png";
+import Daf from "./daf.png";
+import Page from "./page/page";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  constructor() {
+    super();
+    this.state = {
+      data: [
+        { id: 1, name: "Pankaj", photo: Lotus },
+        { id: 2, name: "Rupika", photo: Rose },
+        { id: 3, name: "Avishka", photo: Daf },
+        { id:4, name:"ladies", photo:Lotus}
+      ],
+    };
+  }
+  render() {                                       
+    return (
+      <div className="App">
+        <h1>DATA</h1>
+        {this.state.data.map(({ id, name, photo }) => (
+          <Page key={id} name={name} photo={photo}></Page>
+        ))}
+      </div>
+    );
+  }
 }
 
 export default App;
