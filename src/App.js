@@ -20,10 +20,13 @@ class App extends React.Component{
   render() {                                       
     return (
       <div className="App">
-        <h1>DATA</h1>
+        
+      <h1>DATA</h1>
+      <div className="datu">
         {this.state.data.map(({ id, name, photo }) => (
           <Page key={id} name={name} photo={photo}></Page>
         ))}
+      </div>
       </div>
     );
   }

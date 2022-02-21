@@ -1,12 +1,12 @@
-.renderPage{
-  display: flex;
-  flex-direction:column;
-}
+
 .image{
     width: 200px;
     height: 200px;
 }
-.head{
+.Page{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+    padding: 25px;
+    align-items: center;
 }
+

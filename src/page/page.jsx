@@ -4,10 +4,10 @@ import "./page.scss";
 const Page=({name,photo})=>{
  return(
      <div className="Page">
-     <div className="renderPage">
-     <h1 className="head">{name}</h1>
+     
+     <h2 className="head">{name}</h2>
      <img src={photo} alt="pho" className="image"></img>
-     </div>
+     
      </div>
  );
 };
